@@ -1,0 +1,147 @@
+.header {
+  background-color: #5fbe77;
+}
+
+
+.bg-header-color {
+  background-color: #c8e6c9; /* Light green color */
+  /* You can adjust the shade of green as per your preference */
+}
+
+body {
+  
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+  position: relative;
+}
+/* styles.css */
+
+.hero {
+  background-image: url('img/fontpage.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .container {
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem; /* Adjust size as needed */
+  margin-bottom: 1rem; /* Adjust spacing as needed */
+}
+
+.hero p {
+  font-size: 1.5rem; /* Adjust size as needed */
+  margin-bottom: 1.5rem; /* Adjust spacing as needed */
+}
+
+.hero .btn {
+  font-size: 1.25rem; /* Adjust size as needed */
+  padding: 1rem 2rem; /* Adjust padding as needed */
+  border-radius: 5px; /* Adjust border radius as needed */
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #0056b3; /* Adjust hover color as needed */
+}
+
+section {
+  padding: 60px 0;
+}
+
+footer {
+  background: #f8f9fa;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+/* Additional Styles */
+#hours-contact h3 {
+  margin-bottom: 20px;
+}
+
+#hours-contact table {
+  margin-bottom: 0;
+}
+#hours-contact table td {
+  font-weight: bold;
+}
+
+#hours-contact table td, #hours-contact table th {
+  padding: 8px; /* Add padding to cells for spacing */
+  text-align: center; /* Center align text in cells */
+  color: white; /* Set text color to white */
+}
+
+#hours-contact table th {
+  font-weight: bold; /* Make table headers bold */
+}
+
+.contact-icons {
+  position: fixed;
+  left: 20px; /* Adjust horizontal position */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.whatsapp-icon, .phone-icon {
+  margin-bottom: 10px; /* Adjust vertical spacing between icons */
+}
+
+.container {
+  position: relative;
+  z-index: 1; /* Ensure content is above the icons */
+}
+
+
+
+.floating {
+  transition: transform 0.3s ease;
+  transform: translateY(-5px); /* Adjust the floating distance */
+}
+
+
+.fixed-size {
+  width: 100%;
+  height: 200px; /* Set a fixed height for the images */
+  object-fit: cover; /* Ensures images cover the area without distortion */
+}
+
+.card {
+  height: 100%; /* Make the card take up the full height of the column */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow the card body to grow and fill the available space */
+}
+
+
+.container {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.container.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
