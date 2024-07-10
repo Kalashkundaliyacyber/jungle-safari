@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Jungle Safari - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+ 
+    <header class="bg-header-color">
+        <div class="container d-flex justify-content-between align-items-center py-2">
+            <div class="logo d-flex align-items-center">
+                <img src="icon/logo.jpg" alt="The Jungle Safari Logo" class="mr-2 logo-img">
+                <span class="h4 mb-0">The Jungle Safari</span>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item "><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Booking</a></li>                        
+                        <li class="nav-item active "><a class="nav-link" href="contact.html">Contact</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+
+    
+
+   
+
+    <div class="gallery-container" id="gallery">
+        <div class="gallery-item" data-type="photo">
+            <img src="img/chilla/7-Small.png" alt="Photo 1">
+        </div>
+        
+        <div class="gallery-item" data-type="video">
+            
+            <video src="img/chilla/WhatsApp Video 2024-07-10 at 8.15.17 PM (1).mp4" muted></video>
+        
+        </div>
+        <div class="gallery-item" data-type="photo">
+            <img src="img/chilla/8-Small.png" alt="Photo 1">
+        </div>
+        <div class="gallery-item" data-type="video">
+            <video src="img/chilla/WhatsApp Video 2024-07-10 at 8.15.17 PM.mp4" muted></video>
+        </div>
+        <div class="gallery-item" data-type="photo">
+            <img src="img/chilla/photo1.jpg" alt="Photo 1">
+        </div>
+        <div class="gallery-item" data-type="video">
+            <video src="img/chilla/WhatsApp Video 2024-07-10 at 8.15.19 PM (1).mp4" muted></video>
+        </div>
+        <div class="gallery-item" data-type="photo">
+            <img src="img/chilla/9-Small.png" alt="Photo 1">
+        </div>
+        <div class="gallery-item" data-type="video">
+            <video src="img/chilla/WhatsApp Video 2024-07-10 at 8.15.19 PM (1).mp4" muted></video>
+        </div>
+        <div class="gallery-item" data-type="photo">
+            <img src="img/chilla/Bird-watching_at_Birding_at_Birding_from_Varandah_from_Wild_Brook_Retreat_-_Rajaji_National_Park,_Uttarakhand.jpg" alt="Photo 1">
+        </div>
+        <div class="gallery-item" data-type="video">
+            <video src="img/chilla/WhatsApp Video 2024-07-10 at 8.15.19 PM.mp4" muted></video>
+        </div>
+    </div>
+
+    <!-- Modal for displaying full-size content -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="">
+            <video id="modal-video" controls></video>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

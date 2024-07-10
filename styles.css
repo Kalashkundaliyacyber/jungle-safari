@@ -1,22 +1,51 @@
-.header {
-  background-color: #5fbe77;
-}
-
-
-.bg-header-color {
-  background-color: #c8e6c9; /* Light green color */
-  /* You can adjust the shade of green as per your preference */
-}
-
+/* General styles */
 body {
-  
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-
-  position: relative;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: black;
+  background-color: white;
 }
-/* styles.css */
+
+/* Header styles */
+.bg-header-color {
+  color: white;
+  background-color: black;
+}
+
+/* Navbar text color */
+.navbar .nav-link {
+  color: white !important;
+}
+
+/* Optional: Change the color on hover for better visibility */
+.navbar .nav-link:hover {
+  color: lightgray !important;
+}
+
+/* Header specific background color */
+.header {
+  background-color: #141414;
+}
+
+/* Logo image size */
+.logo-img {
+  width: 150px; /* Adjust the width as needed */
+  height: auto; /* Keeps the aspect ratio */
+}
+
+/* font for all heading */
+/* Header font settings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 49.844px;
+}
+
+/* font for all paragraph */
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
 
 .hero {
   background-image: url('img/fontpage.jpg');
@@ -75,6 +104,7 @@ footer {
 #hours-contact table {
   margin-bottom: 0;
 }
+
 #hours-contact table td {
   font-weight: bold;
 }
@@ -82,7 +112,7 @@ footer {
 #hours-contact table td, #hours-contact table th {
   padding: 8px; /* Add padding to cells for spacing */
   text-align: center; /* Center align text in cells */
-  color: white; /* Set text color to white */
+  color: rgb(19, 17, 17); /* Set text color to white */
 }
 
 #hours-contact table th {
@@ -106,13 +136,10 @@ footer {
   z-index: 1; /* Ensure content is above the icons */
 }
 
-
-
 .floating {
   transition: transform 0.3s ease;
   transform: translateY(-5px); /* Adjust the floating distance */
 }
-
 
 .fixed-size {
   width: 100%;
@@ -132,7 +159,6 @@ footer {
   flex-grow: 1; /* Allow the card body to grow and fill the available space */
 }
 
-
 .container {
   opacity: 0;
   transform: translateY(20px);
@@ -143,5 +169,79 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+/* Gallery specific styles */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
 
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 100%; /* This creates a square aspect ratio */
+  cursor: pointer;
+  margin: 10px;
+}
 
+.gallery-item img,
+.gallery-item video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover img,
+.gallery-item:hover video {
+  transform: scale(1.1);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 80%; /* Adjust as necessary */
+  max-height: 80%; /* Adjust as necessary */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0); /* Transparent background */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.modal-content img,
+.modal-content video {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fffcfc;
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.close:hover {
+    color: #fff; /* Change to white or desired color on hover */
+}

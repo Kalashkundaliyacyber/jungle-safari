@@ -21,13 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
     /**
      * Count up from start to end within the specified duration
      * @param {HTMLElement} element - The DOM element to update
@@ -81,8 +75,6 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(section);
     }
 });
-
-
 document.addEventListener('DOMContentLoaded', function() {
     const containers = document.querySelectorAll('.container');
 
@@ -104,4 +96,60 @@ document.addEventListener('DOMContentLoaded', function() {
     containers.forEach(container => {
         observer.observe(container);
     });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalVideo = document.getElementById('modal-video');
+    const closeModal = document.querySelector('.close');
+
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const type = item.getAttribute('data-type');
+            if (type === 'photo') {
+                const imgSrc = item.querySelector('img').getAttribute('src');
+                modalImg.src = imgSrc;
+                modalImg.style.display = 'block';
+                modalVideo.style.display = 'none';
+            } else if (type === 'video') {
+                const videoSrc = item.querySelector('video').getAttribute('src');
+                modalVideo.src = videoSrc;
+                modalVideo.style.display = 'block';
+                modalImg.style.display = 'none';
+            }
+            modal.style.display = 'flex';
+            adjustModalContent(); // Call function to adjust modal content size
+        });
+    });
+
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+        modalImg.src = '';
+        modalVideo.src = '';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            modalImg.src = '';
+            modalVideo.src = '';
+        }
+    });
+
+    function adjustModalContent() {
+        const modalContent = document.querySelector('.modal-content');
+        const modalWidth = modalContent.clientWidth;
+        const modalHeight = modalContent.clientHeight;
+
+        // Adjust based on screen size or specific conditions
+        if (window.innerWidth < modalWidth || window.innerHeight < modalHeight) {
+            modalContent.style.maxWidth = '90%';
+            modalContent.style.maxHeight = '90%';
+        } else {
+            modalContent.style.maxWidth = '80%';
+            modalContent.style.maxHeight = '80%';
+        }
+    }
 });
