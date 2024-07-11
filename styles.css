@@ -23,6 +23,17 @@ body {
   color: lightgray !important;
 }
 
+/* Navbar toggler icon */
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: rgb(255, 255, 255);
+} 
+
+
+
 /* Header specific background color */
 .header {
   background-color: #141414;
@@ -34,14 +45,13 @@ body {
   height: auto; /* Keeps the aspect ratio */
 }
 
-/* font for all heading */
-/* Header font settings */
+/* Font for all heading */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Quicksand', sans-serif;
   font-size: 49.844px;
 }
 
-/* font for all paragraph */
+/* Font for all paragraph */
 p {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
@@ -109,7 +119,8 @@ footer {
   font-weight: bold;
 }
 
-#hours-contact table td, #hours-contact table th {
+#hours-contact table td,
+#hours-contact table th {
   padding: 8px; /* Add padding to cells for spacing */
   text-align: center; /* Center align text in cells */
   color: rgb(19, 17, 17); /* Set text color to white */
@@ -127,7 +138,8 @@ footer {
   z-index: 1000;
 }
 
-.whatsapp-icon, .phone-icon {
+.whatsapp-icon,
+.phone-icon {
   margin-bottom: 10px; /* Adjust vertical spacing between icons */
 }
 
@@ -169,6 +181,7 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
 /* Gallery specific styles */
 .gallery-container {
   display: grid;
@@ -201,6 +214,7 @@ footer {
 .gallery-item:hover video {
   transform: scale(1.1);
 }
+
 .modal {
   display: none;
   position: fixed;
@@ -232,16 +246,16 @@ footer {
 }
 
 .close {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: #fffcfc;
-    font-size: 60px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease; /* Smooth transition */
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fffcfc;
+  font-size: 60px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth transition */
 }
 
 .close:hover {
-    color: #fff; /* Change to white or desired color on hover */
+  color: #fff; /* Change to white or desired color on hover */
 }
